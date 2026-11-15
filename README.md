@@ -1,10 +1,12 @@
-# <img src="docs/images/glovebox-icon.svg" width="48" height="48" align="middle" alt=""> Glovebox
+# <img src="docs/images/glovebox-icon.svg" width="24" height="24" align="bottom" alt=""> Glovebox
 
 **모빌리티 환경에서 추억이 담긴 곳을 다시 찾고, 사진과 음악으로 남긴 드라이브 코스를 다른 운전자와 공유하는 인포테인먼트 플랫폼**
 
 ![내가 달린 길, 함께 나눈 길. Glovebox 앨범에 담긴 가을 숲길](docs/images/glovebox-teaser.webp)
 
 ## 기획 의도
+
+> **“운전하다 우연히 마주친 장소가 잊고 있던 추억을 떠올리게 해준다면, 주행이 조금 더 특별해지지 않을까?”**
 
 자동차는 추억이 담긴 장소로 우리를 직접 데려다줄 수 있습니다. 휴대폰에 남겨 둔 사진을 다시 찾아보는 일은 드물어도, 운전하다가 예전에 다녀온 곳을 우연히 지나는 일은 있습니다. 저희는 그곳을 다시 지나는 순간에 당시 찍은 사진과 들었던 음악을 차에서 찾아볼 수 있으면 좋겠다고 생각했습니다.
 
@@ -16,9 +18,11 @@ Glovebox라는 이름은 운전자와 동승자가 함께 열어 보는 차 안�
 
 홈을 열면 지난 방문에서 찍은 사진이 배경에 보입니다. 방문 장소와 날짜를 확인하고, 옆에 있는 음악 카드에서 앨범에 담긴 곡을 바로 재생할 수 있습니다.
 
-![방문 앨범과 음악 카드가 보이는 Glovebox 홈 화면](docs/images/home.webp)
-
 휴대폰 사진은 촬영 위치와 시간을 기준으로 묶습니다. 같은 장소라도 다녀온 날이 다르면 앨범이 따로 생깁니다. 차가 예전에 사진을 찍었던 장소에 가까워지면 당시 방문을 알려줍니다.
+
+| 차량 홈 | 방문 앨범에서 사진 넘기기 |
+| --- | --- |
+| [![방문 장소와 음악 카드가 보이는 홈](docs/images/home.webp)](docs/images/home.webp) | [![가을 숲길 사진과 같은 방문에서 찍은 사진 미리보기](docs/images/intro-album.webp)](docs/images/intro-album.webp) |
 
 ## 사진과 추천곡
 
@@ -26,14 +30,21 @@ Glovebox라는 이름은 운전자와 동승자가 함께 열어 보는 차 안�
 
 주차 중에 곡을 선택하면 사진 한쪽에 YouTube 플레이어가 열립니다. 듣고 싶은 구간으로 이동하거나, 음악을 들으면서 화살표와 미리보기로 사진을 넘길 수 있습니다.
 
-![방문 앨범에서 사진과 추천곡을 함께 보는 화면](docs/images/visit-album.webp)
+| 방문 앨범과 추천곡 | 사진을 보며 YouTube 재생 |
+| --- | --- |
+| [![방문 앨범의 사진과 추천곡 카드](docs/images/visit-album.webp)](docs/images/visit-album.webp) | [![앨범 사진 오른쪽 아래에 열린 YouTube 플레이어](docs/images/album-youtube-player.webp)](docs/images/album-youtube-player.webp) |
 
 ## 음악 보관함과 주행 모드
 
-| 음악 보관함 | 주행 중 재생 |
+내 YouTube 계정에서 좋아요를 누른 곡과 재생목록을 불러옵니다. 마지막 동기화 후 6시간이 지나면 다음 주차 때 목록을 갱신합니다. 차량 음악 플레이어에서는 듣고 있는 곡의 재생 위치를 확인하고 보관함에서 다음 곡을 고를 수 있습니다.
+
+| 음악 보관함 | 차량 음악 플레이어 |
 | --- | --- |
-| [![YouTube 재생목록과 차량 청취 기록](docs/images/music-library.webp)](docs/images/music-library.webp) | [![주행 중 곡 정보와 재생 버튼](docs/images/drive-player.webp)](docs/images/drive-player.webp) |
-| 내 YouTube 계정에서 좋아요를 누른 곡과 재생목록을 불러옵니다. 마지막 동기화 후 6시간이 지나면 다음 주차 때 목록을 갱신합니다. 청취 기록을 켜면 주행 중 들은 곡도 경로와 함께 남습니다. | 차가 출발하면 영상이 닫히고 음악 제어 화면이 열립니다. 연결된 iPhone의 YouTube Music에서 듣던 곡을 차량 화면에서 일시정지하거나 이어 들을 수 있습니다. 다시 주차하면 보던 사진으로 돌아갑니다. |
+| [![YouTube 재생목록과 차량 청취 기록](docs/images/music-library.webp)](docs/images/music-library.webp) | [![재생 위치와 보관함의 곡 목록을 함께 보여주는 차량 음악 플레이어](docs/images/vehicle-music-player.webp)](docs/images/vehicle-music-player.webp) |
+
+차가 출발하면 영상이 닫히고 음악 제어 화면이 열립니다. 연결된 iPhone의 YouTube Music에서 듣던 곡을 차량 화면에서 일시정지하거나 이어 들을 수 있습니다. 청취 기록을 켜면 주행 중 들은 곡도 경로와 함께 남습니다. 다시 주차하면 보던 사진으로 돌아갑니다.
+
+![주행 중 곡 정보와 재생 버튼](docs/images/drive-player.webp)
 
 ## 내가 달린 길
 
@@ -45,9 +56,15 @@ Glovebox라는 이름은 운전자와 동승자가 함께 열어 보는 차 안�
 
 공유 지도에서 운전자의 프로필을 누르면 그 사람이 공유한 드라이브 코스를 볼 수 있습니다. 코스를 열면 실제로 달린 경로와 방문 순서가 지도에 표시되고, 각 경유지를 누르면 작성자가 남긴 사진과 메모를 볼 수 있습니다.
 
-마음에 드는 코스는 보관함에 저장할 수 있습니다. **코스 보내기**를 선택하면 작성자와 경유지 정보가 담긴 파일을 공유합니다. 받은 사람도 Glovebox에서 같은 경로를 열어볼 수 있습니다.
-
 ![공유 지도에서 운전자 프로필과 경유지별 기록을 보는 화면](docs/images/shared-courses.webp)
+
+운전자별로 코스를 둘러보거나, 현재 위치와 가까운 경유지가 있는 코스를 찾을 수 있습니다. 경유지를 선택하면 작성자의 메모와 다음 방문지가 함께 보입니다.
+
+| 운전자별 공유 코스 | 가까운 경유지와 방문 순서 |
+| --- | --- |
+| [![운전자별 프로필과 각자 공유한 드라이브 코스](docs/images/driver-profiles.webp)](docs/images/driver-profiles.webp) | [![선택한 코스의 주행 경로와 경유지 메모가 함께 보이는 지도](docs/images/nearby-stops.webp)](docs/images/nearby-stops.webp) |
+
+마음에 드는 코스는 보관함에 저장할 수 있습니다. **코스 보내기**를 선택하면 작성자와 경유지 정보가 담긴 파일을 공유합니다. 받은 사람도 Glovebox에서 같은 경로를 열어볼 수 있습니다.
 
 ## 설치와 실행
 
