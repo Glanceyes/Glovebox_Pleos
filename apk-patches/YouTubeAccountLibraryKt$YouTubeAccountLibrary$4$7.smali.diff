@@ -1,0 +1,11 @@
+--- original/YouTubeAccountLibraryKt$YouTubeAccountLibrary$4$7.smali
++++ modified/YouTubeAccountLibraryKt$YouTubeAccountLibrary$4$7.smali
+@@ -655,7 +655,7 @@
+ 
+     move-object/from16 v13, p2
+ 
+-    invoke-static/range {v3 .. v15}, Landroidx/compose/material3/ButtonKt;->FilledTonalButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
++    invoke-static/range {v3 .. v15}, Lio/memorydrive/pleos/GloveboxControls;->FilledTonalButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+ 
+     :goto_1
+     return-void

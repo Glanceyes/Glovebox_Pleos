@@ -1,0 +1,119 @@
+--- original/MemoryScreenKt$MemoryPhoto$9.smali
++++ modified/MemoryScreenKt$MemoryPhoto$9.smali
+@@ -612,7 +612,7 @@
+     check-cast v1, Landroidx/compose/foundation/layout/BoxScope;
+ 
+     .line 440
+-    invoke-virtual {v12}, Lio/memorydrive/pleos/Memory;->getImported()Z
++    invoke-static {v12}, Lio/memorydrive/pleos/GloveboxSamples;->hasDisplayPhotos(Ljava/lang/Object;)Z
+ 
+     move-result v1
+ 
+@@ -980,7 +980,7 @@
+     const-string v2, "memory-photo-loading"
+ 
+     :goto_a
+-    invoke-static {v1, v2}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v1, v2}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v1
+ 
+@@ -1290,7 +1290,7 @@
+ 
+     move-object/from16 v22, p2
+ 
+-    invoke-static/range {v1 .. v25}, Landroidx/compose/material3/TextKt;->Text--4IGK_g(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v25}, Lio/memorydrive/pleos/GloveboxDesign;->text(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
+ 
+     :cond_16
+     invoke-interface/range {p2 .. p2}, Landroidx/compose/runtime/Composer;->endReplaceGroup()V
+@@ -2004,7 +2004,7 @@
+     check-cast v1, Landroidx/compose/foundation/layout/BoxScope;
+ 
+     .line 461
+-    invoke-virtual {v11}, Lio/memorydrive/pleos/Memory;->getImported()Z
++    invoke-static {v11}, Lio/memorydrive/pleos/GloveboxSamples;->hasDisplayPhotos(Ljava/lang/Object;)Z
+ 
+     move-result v1
+ 
+@@ -2548,7 +2548,7 @@
+ 
+     move-object/from16 v22, p2
+ 
+-    invoke-static/range {v1 .. v25}, Landroidx/compose/material3/TextKt;->Text--4IGK_g(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v25}, Lio/memorydrive/pleos/GloveboxDesign;->text(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
+ 
+     .line 466
+     invoke-virtual/range {v27 .. v27}, Landroidx/compose/material3/ColorScheme;->getOnSurfaceVariant-0d7_KjU()J
+@@ -2581,7 +2581,7 @@
+ 
+     const/16 v23, 0xc06
+ 
+-    invoke-static/range {v1 .. v25}, Landroidx/compose/material3/TextKt;->Text--4IGK_g(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v25}, Lio/memorydrive/pleos/GloveboxDesign;->text(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
+ 
+     .line 885
+     invoke-static/range {p2 .. p2}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
+@@ -2941,7 +2941,7 @@
+ 
+     const-string v2, "memory-photo-previous"
+ 
+-    invoke-static {v1, v2}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v1, v2}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v2
+ 
+@@ -3030,7 +3030,7 @@
+ 
+     move/from16 v13, v18
+ 
+-    invoke-static/range {v1 .. v13}, Landroidx/compose/material3/ButtonKt;->TextButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
++    invoke-static/range {v1 .. v13}, Lio/memorydrive/pleos/GloveboxControls;->TextButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+ 
+     .line 475
+     invoke-static/range {p1 .. p1}, Lio/memorydrive/pleos/MemoryScreenKt;->access$MemoryPhoto$lambda$91(Landroidx/compose/runtime/MutableIntState;)I
+@@ -3082,7 +3082,7 @@
+ 
+     const-string v7, "memory-photo-position"
+ 
+-    invoke-static {v2, v7}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v2, v7}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v2
+ 
+@@ -3119,7 +3119,7 @@
+     move-object/from16 v22, p2
+ 
+     .line 475
+-    invoke-static/range {v1 .. v25}, Landroidx/compose/material3/TextKt;->Text--4IGK_g(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v25}, Lio/memorydrive/pleos/GloveboxDesign;->text(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
+ 
+     .line 477
+     invoke-static/range {p1 .. p1}, Lio/memorydrive/pleos/MemoryScreenKt;->access$MemoryPhoto$lambda$91(Landroidx/compose/runtime/MutableIntState;)I
+@@ -3163,7 +3163,7 @@
+ 
+     const-string v2, "memory-photo-next"
+ 
+-    invoke-static {v1, v2}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v1, v2}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v2
+ 
+@@ -3200,7 +3200,7 @@
+ 
+     move-object/from16 v11, p2
+ 
+-    invoke-static/range {v1 .. v13}, Landroidx/compose/material3/ButtonKt;->TextButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
++    invoke-static/range {v1 .. v13}, Lio/memorydrive/pleos/GloveboxControls;->TextButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+ 
+     .line 934
+     invoke-static/range {p2 .. p2}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
+@@ -3320,7 +3320,7 @@
+     move-object/from16 v22, p2
+ 
+     .line 481
+-    invoke-static/range {v1 .. v25}, Landroidx/compose/material3/TextKt;->Text--4IGK_g(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v25}, Lio/memorydrive/pleos/GloveboxDesign;->text(Ljava/lang/String;Landroidx/compose/ui/Modifier;JJLandroidx/compose/ui/text/font/FontStyle;Landroidx/compose/ui/text/font/FontWeight;Landroidx/compose/ui/text/font/FontFamily;JLandroidx/compose/ui/text/style/TextDecoration;Landroidx/compose/ui/text/style/TextAlign;JIZIILkotlin/jvm/functions/Function1;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/runtime/Composer;III)V
+ 
+     :cond_39
+     invoke-interface/range {p2 .. p2}, Landroidx/compose/runtime/Composer;->endReplaceGroup()V

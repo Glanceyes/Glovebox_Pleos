@@ -1,0 +1,20 @@
+--- original/ExternalConnectionViewKt$ExternalConnectionView$4.smali
++++ modified/ExternalConnectionViewKt$ExternalConnectionView$4.smali
+@@ -444,7 +444,7 @@
+ 
+     const-string v2, "external-pair-save"
+ 
+-    invoke-static {v1, v2}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v1, v2}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v4
+ 
+@@ -497,7 +497,7 @@
+     move-object/from16 v13, p1
+ 
+     .line 70
+-    invoke-static/range {v3 .. v15}, Landroidx/compose/material3/ButtonKt;->Button(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
++    invoke-static/range {v3 .. v15}, Lio/memorydrive/pleos/GloveboxControls;->Button(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;Landroidx/compose/material3/ButtonColors;Landroidx/compose/material3/ButtonElevation;Landroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/layout/PaddingValues;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+ 
+     :goto_2
+     return-void

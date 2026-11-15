@@ -1,0 +1,6 @@
+Font: Yeongdo (Regular)
+Provider: Yeongdo Cultural City Center
+Reference: https://modufont.com/fonts/yeongdoche/
+Official listing: https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?menuNo=200195&wrtSn=13382160
+Webfont file: https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.2/Yeongdo-Rg.woff2
+Attribution is displayed on logo-yeongdo.html and embedded in SVG metadata.

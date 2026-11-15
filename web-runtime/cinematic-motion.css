@@ -1,0 +1,53 @@
+/* Detail stays stationary inside the dials. Only the outer metal catches light. */
+#app .dial .rim-comet{position:absolute;inset:-2%;border-radius:50%;pointer-events:none;z-index:2;background:conic-gradient(from 15deg,transparent 0 300deg,#e0a56000 310deg,#f3cb8655 337deg,#fff3d6c9 350deg,transparent 354deg);mask-image:radial-gradient(circle,transparent 65%,#000 67%,#000 69%,transparent 71%);animation:rim-travel 12s linear infinite}
+#app .dial .rim-glint{position:absolute;inset:0;border-radius:50%;z-index:2;pointer-events:none;background:conic-gradient(from 180deg,transparent 0 315deg,#fff5d8b0 325deg,transparent 335deg);mask-image:radial-gradient(circle,transparent 66%,#000 68%,#000 70%,transparent 72%);animation:rim-travel 19s linear infinite reverse;opacity:.6}
+#app.playing .dial .rim-comet{animation-duration:9s}
+#app.playing .dial .rim-glint{animation-duration:14s}
+#app.playing .dial .metal-reflection{animation-duration:12s}
+.motion-surface{position:relative}
+.surface-shimmer{position:absolute;inset:0;pointer-events:none;border-radius:inherit;z-index:4;background:linear-gradient(110deg,transparent 25%,#fff3d210 40%,#fff8e92b 48%,transparent 60%);background-size:300% 100%;opacity:0;animation:surface-light 11s ease-in-out infinite}
+.preference-card:nth-child(2)>.surface-shimmer{animation-delay:-3s}
+.preference-card:nth-child(3)>.surface-shimmer{animation-delay:-7s}
+#app.playing .music-widget>.surface-shimmer,#app.playing .music-console>.surface-shimmer{animation-duration:6s}
+#app .tile,#app .memory-card,#app .route-card{transition:rotate .35s ease,box-shadow .35s ease,translate .35s ease}
+#app.playing .album-stack{animation:album-sway 7s ease-in-out infinite}
+#app.playing .setting-track>img{animation:cover-lift 4s ease-in-out infinite}
+#app.playing .drive-player{animation:player-glow 4.2s ease-in-out infinite}
+#app .track.selected{background-size:200% 100%}
+#app.playing .track.selected{animation:selected-track-light 5s ease-in-out infinite}
+.home-bubbles .bubble{animation:bubble-float 7s ease-in-out infinite;animation-delay:calc(var(--motion-order,0)*-.9s)}
+.coordinates .compass{animation:compass-sway 12s ease-in-out infinite}
+.tile-indicator i{animation:indicator-breathe 5s ease-in-out infinite}
+.tile-indicator i:nth-child(3n){animation-delay:-1.6s}
+.tile-indicator i:nth-child(3n+1){animation-delay:-3.2s}
+.drive-sidebar .road{background-size:100% 200%;animation:road-drift 6s linear infinite}
+.drive-steps b{transition:box-shadow .4s ease,scale .4s ease}
+@media(hover:hover){
+ .tile:hover img,.memory-card:hover>img,.route-card:hover>img{filter:brightness(1.08) saturate(1.08)}
+ .tile:hover h3,.memory-card:hover h3{translate:0 -2px}
+ .tile:hover small,.memory-card:hover .metadata{translate:3px 0}
+ .preference-card:hover>.surface-shimmer{animation-duration:3.5s}
+ .seasons span:hover{translate:0 -3px;filter:brightness(1.15)}
+ .profile-summary>div:hover b{scale:1.08}
+ .setting-metrics button:hover strong{translate:0 -3px}
+ .side-buttons button:hover,.transport button:hover{box-shadow:0 4px 20px #e9b46b25}
+ .home-bubbles .bubble:hover img{filter:brightness(1.12)}
+ .track:hover .track-play{scale:1.2}
+ .brand-logo:hover{filter:drop-shadow(0 0 6px #fff2)}
+}
+.tile h3,.tile small,.memory-card h3,.memory-card .metadata,.seasons span,.profile-summary b,.setting-metrics strong,.track-play{transition:translate .35s ease,scale .35s ease,filter .35s ease}
+.tile img,.memory-card>img,.route-card>img,.home-bubbles img{transition:filter .45s ease}
+.brand-logo{transition:filter .4s ease}
+@keyframes rim-travel{to{rotate:360deg}}
+@keyframes surface-light{0%,55%,100%{background-position:120% 0;opacity:0}65%{opacity:.65}86%{background-position:-20% 0;opacity:.4}95%{opacity:0}}
+@keyframes album-sway{0%,100%{rotate:-1deg;translate:0 0}50%{rotate:1deg;translate:0 -3px}}
+@keyframes cover-lift{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes player-glow{0%,100%{box-shadow:0 10px 30px #0002}50%{box-shadow:0 10px 35px #c891512c}}
+@keyframes selected-track-light{0%,100%{box-shadow:inset 2px 0 #d9ab7766}50%{box-shadow:inset 2px 0 #ffe5ac,0 0 12px #d9ab7712}}
+@keyframes bubble-float{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes compass-sway{0%,100%{rotate:-5deg}50%{rotate:5deg}}
+@keyframes indicator-breathe{0%,100%{opacity:.35}50%{opacity:.85}}
+@keyframes road-drift{to{background-position:0 200%}}
+#app.motion-suspended *,#app.motion-suspended *::before,#app.motion-suspended *::after{animation-play-state:paused!important}
+.reduce-motion #app *,.reduce-motion #app *::before,.reduce-motion #app *::after,.reduce-motion #dialog,.reduce-motion #dialog::backdrop,.reduce-motion #toast{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#app *,#app *::before,#app *::after,#dialog,#dialog::backdrop,#toast{animation:none!important;transition:none!important}}

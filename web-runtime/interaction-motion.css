@@ -1,0 +1,28 @@
+/* Small, local movements keep the landscape and instrument labels calm. */
+.dashboard .progress span{transform-origin:left center}
+.thumbs button,.hero-thumbs button,.other-row button,.track,.setting-link,.detail-controls button{transition:background-color .3s ease,box-shadow .3s ease,translate .3s ease}
+@media(hover:hover){
+ .thumbs button:hover,.hero-thumbs button:hover{translate:0 -4px;box-shadow:0 8px 20px #14120c30}
+ .other-row button:hover{translate:0 -5px}
+ .track:hover{translate:4px 0}
+ .setting-link:hover>span{translate:4px -2px}
+ .detail-controls button:hover{translate:0 -2px}
+}
+.setting-link>span{display:inline-block;transition:translate .3s ease}
+.profile-photo,.music-cover{background-position:50% 50%}
+#app.playing .drive-steps>span:nth-child(2) b{animation:step-glow 2.8s ease-in-out infinite}
+#app.playing .track.selected .track-play{animation:track-beat 1.7s ease-in-out infinite}
+.hero-picture .place-tag{animation:tag-arrive .65s ease-out both}
+.photo-count{font-variant-numeric:tabular-nums}
+.progress span{transition:width .6s linear}
+.home-bubbles .bubble img{animation:memory-breathe 14s ease-in-out infinite alternate}
+.home-bubbles .bubble:nth-child(2) img{animation-delay:-5s}
+.home-bubbles .bubble:nth-child(3) img{animation-delay:-9s}
+@keyframes memory-breathe{from{transform:scale(1)}to{transform:scale(1.09)}}
+@keyframes tag-arrive{from{opacity:0;translate:0 -6px}to{opacity:1;translate:0 0}}
+@keyframes track-beat{0%,100%{opacity:.65;scale:1}50%{opacity:1;scale:1.13}}
+@keyframes step-glow{0%,100%{box-shadow:0 0 0 0 #f4c58400}50%{box-shadow:0 0 0 7px #f4c58418}}
+.reduce-motion #app *,.reduce-motion #app *::before,.reduce-motion #app *::after{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#app *,#app *::before,#app *::after{animation:none!important;transition:none!important}}
+.reduce-motion #dialog,.reduce-motion #dialog::backdrop,.reduce-motion #toast{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#dialog,#dialog::backdrop,#toast{animation:none!important;transition:none!important}}

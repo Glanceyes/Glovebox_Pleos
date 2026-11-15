@@ -1,0 +1,5 @@
+/* Glass stays on the panels; small nested overlays use tinted glass without extra blur passes. */
+#app .detail .hero-picture{isolation:isolate;contain:paint}
+#app .detail .hero-picture>img{transition:none;animation:none}
+#app .detail .hero-thumbs,#app .detail .photo-step,#app .detail .place-tag,#app .detail .photo-count,#app .detail .detail-stats>div{backdrop-filter:none;-webkit-backdrop-filter:none;background-color:#29303baf}
+#app .detail .hero-picture .place-tag{animation:none}

@@ -1,0 +1,19 @@
+--- original/VehicleLibraryHomeKt$VehicleLibraryHome$15.smali
++++ modified/VehicleLibraryHomeKt$VehicleLibraryHome$15.smali
+@@ -353,6 +353,16 @@
+ .method private static final invoke$lambda$5(Lio/memorydrive/pleos/LibraryFeature;Lio/memorydrive/pleos/PleosMemoryEngine;Lio/memorydrive/pleos/DriveRecap;Lio/memorydrive/pleos/SharedCourseRecommendation;Ljava/util/List;Ljava/util/List;ZLjava/lang/String;Ljava/util/List;Landroidx/compose/material3/ColorScheme;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableIntState;Landroidx/compose/runtime/MutableIntState;Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/lazy/LazyListScope;)Lkotlin/Unit;
+     .locals 22
+ 
++    move-object/from16 v0, p1
++    move-object/from16 v1, p10
++    move-object/from16 v2, p22
++    invoke-static {v0, v1, v2}, Lio/memorydrive/pleos/GloveboxFeatures;->journal(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
++    move-result v0
++    if-eqz v0, :glovebox_normal_library
++    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
++    return-object v0
++    :glovebox_normal_library
++
+     move-object/from16 v0, p0
+ 
+     move-object/from16 v1, p1

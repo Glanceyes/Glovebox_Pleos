@@ -1,0 +1,11 @@
+--- original/MemoryKt.smali
++++ modified/MemoryKt.smali
+@@ -355,6 +355,8 @@
+     .line 81
+     sget-object v0, Lio/memorydrive/pleos/MemoryKt;->demoMemories:Ljava/util/List;
+ 
++    invoke-static {v0}, Lio/memorydrive/pleos/GloveboxSamples;->list(Ljava/util/List;)Ljava/util/List;
++    move-result-object v0
+     return-object v0
+ .end method
+ 

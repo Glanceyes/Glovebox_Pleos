@@ -1,0 +1,10 @@
+/* Move the metallic reflection itself; keep the face, numbers and tick marks still. */
+#app .dial{background:radial-gradient(circle at center,#30343c 0%,#252a33 61%,#8c754e 66%,#333039 70%,#262b34 74%)}
+#app .dial .bezel-flow,#app .dial .instrument-trace{display:none}
+#app .dial .metal-reflection{position:absolute;inset:0;pointer-events:none;z-index:1;border-radius:50%;background:conic-gradient(from 22deg,#826340 0deg,#d9ad68 22deg,#fff0c1 34deg,#a5834e 48deg,#514636 85deg,#dcb476 130deg,#fff5d8 147deg,#ad864f 165deg,#443b32 218deg,#dbad6e 261deg,#ffedb8 276deg,#8b704b 307deg,#826340 360deg);mask-image:radial-gradient(circle,transparent 60%,#000 63%,#000 70%,transparent 73%);animation:metal-reflection 16s linear infinite;opacity:.95}
+#app.playing .dial .metal-reflection{animation-duration:9s}
+#app .dial .instrument-bezel{z-index:2}
+#app .dial>b,#app .dial>span,#app .dial>small,#app .dial>em{z-index:3}
+@keyframes metal-reflection{to{rotate:360deg}}
+.reduce-motion #app .metal-reflection{animation:none!important}
+@media(prefers-reduced-motion:reduce){#app .metal-reflection{animation:none!important}}

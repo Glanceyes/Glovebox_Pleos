@@ -1,0 +1,13 @@
+새 후보 5종 / 2026-11-13
+조선100년체, 조선신명조, 조선견명조, 조선이니셜체
+공식 배포: https://event.chosun.com/100/100font.html
+파일은 공식 fontdown.chosun.com 에서 받았으며 원본 ZIP을 함께 보관했습니다.
+라이선스 원문: CHOSUN-SOURCE-LICENSE.txt
+
+이롭게 바탕
+공식 저장소: https://github.com/iropke/font-iropke-batang
+Copyright 2016 이롭게(iropke). SIL Open Font License 1.1.
+라이선스 원문: Editorial-README.md, Editorial-EULA_iropke_batang.pdf
+
+비교 기준: 카페24 클래식타입 https://fonts.cafe24.com/
+기존 후보는 새 후보 수에 포함하지 않습니다.

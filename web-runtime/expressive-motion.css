@@ -1,0 +1,39 @@
+/* Additional movement uses opacity and transforms; layout and actions stay synchronous. */
+#view .tile>img,#view .memory-card>img,#view .route-card>img,#view .saved-preview-row img{transition:scale 650ms cubic-bezier(.2,.7,.2,1),filter 400ms ease}
+@media(hover:hover){
+ #view .tile:hover>img,#view .memory-card:hover>img,#view .route-card:hover>img{scale:1.045;filter:brightness(1.08)}
+ #view .saved-preview-row button:hover img{scale:1.08}
+ #view .tile:hover .tile-arrow{translate:3px -3px}
+ #view .bubble:hover{scale:1.08;translate:0 -3px}
+ #view .album-stack:hover .sleeve-0{translate:-5px -2px;rotate:-3deg}
+ #view .album-stack:hover .sleeve-1{translate:5px -2px;rotate:3deg}
+ #navigation button:hover .icon{translate:0 -3px}
+ .next-memory:hover img{scale:1.08}
+}
+.tile-arrow,.bubble,#navigation .icon,.album-stack .sleeve,.next-memory img{transition:translate 320ms ease,rotate 450ms ease,scale 450ms ease}
+.thumbs button,.memory-contact-sheet button{transition:scale 250ms ease,box-shadow 250ms ease,border-color 250ms ease}
+.thumbs button.active,.memory-contact-sheet button.selected{box-shadow:0 0 0 2px #e4b46b55,0 4px 16px #0003}
+.thumbs button:active,.memory-contact-sheet button:active{scale:.94}
+.track{transition:background-color 280ms ease,padding-left 280ms ease,border-color 280ms ease}
+.track:hover{padding-left:10px}
+#app .instrument-orbit{position:absolute;inset:7px;border-radius:50%;pointer-events:none;border:1px solid transparent;border-top-color:#ffd69a90;border-left-color:#ffd69a15;animation:orbit-light 11s linear infinite;animation-play-state:paused;opacity:0;transition:opacity 500ms}
+#app.playing .instrument-orbit{animation-play-state:running;opacity:.7}
+#app .music-widget .round,#app .music-console .round{position:relative;isolation:isolate}
+#app.playing :is(.music-widget,.music-console) .round[data-action=play]{animation:play-halo 2600ms ease-in-out infinite}
+#app .waveform i{transform-origin:bottom;animation:wave-flow var(--wave-speed,900ms) ease-in-out infinite alternate;animation-delay:var(--wave-delay,0ms);animation-play-state:paused}
+#app.playing:not(.sound-muted) .waveform i{animation-play-state:running}
+#app .album-stack .sleeve{animation:sleeve-float 6s ease-in-out infinite;animation-play-state:paused}
+#app .album-stack .sleeve-1{animation-delay:-3s}
+#app.playing .album-stack .sleeve{animation-play-state:running}
+#app .progress span{position:relative}
+#app.playing .progress span::after{content:'';position:absolute;right:0;top:50%;width:5px;height:5px;border-radius:50%;background:#ffdda6;translate:0 -50%;box-shadow:0 0 8px #ffc982;animation:progress-light 1600ms ease-in-out infinite}
+.motion-feedback{position:absolute;pointer-events:none;z-index:99;border:1px solid #ffe2b3aa;border-radius:50%;width:30px;height:30px;box-shadow:0 0 14px #ffcf8222}
+#app .seasons span{transform-origin:left center}
+#app .sound-presets button[aria-pressed=true]{transition:background-color 250ms ease,box-shadow 250ms ease;box-shadow:0 0 12px #e9ba7622}
+@keyframes orbit-light{to{rotate:360deg}}
+@keyframes play-halo{0%,100%{box-shadow:0 0 0 0 #efbc6c00,0 2px 8px #0003}50%{box-shadow:0 0 0 7px #efbc6c12,0 0 22px #efbc6c22}}
+@keyframes wave-flow{0%{transform:scaleY(.25)}40%{transform:scaleY(.65)}100%{transform:scaleY(1)}}
+@keyframes sleeve-float{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@keyframes progress-light{0%,100%{opacity:.45}50%{opacity:1}}
+.reduce-motion #app *,.reduce-motion #app *::before,.reduce-motion #app *::after{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#app *,#app *::before,#app *::after{animation:none!important;transition:none!important}}

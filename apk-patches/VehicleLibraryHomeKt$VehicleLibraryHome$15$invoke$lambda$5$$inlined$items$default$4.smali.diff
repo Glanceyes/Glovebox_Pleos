@@ -1,0 +1,20 @@
+--- original/VehicleLibraryHomeKt$VehicleLibraryHome$15$invoke$lambda$5$$inlined$items$default$4.smali
++++ modified/VehicleLibraryHomeKt$VehicleLibraryHome$15$invoke$lambda$5$$inlined$items$default$4.smali
+@@ -538,7 +538,7 @@
+ 
+     move-result-object v2
+ 
+-    invoke-static {v1, v2}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v1, v2}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v2
+ 
+@@ -607,7 +607,7 @@
+     move-object/from16 v14, p3
+ 
+     .line 466
+-    invoke-static/range {v1 .. v17}, Landroidx/compose/material3/SurfaceKt;->Surface-o_FOJdg(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;JJFFLandroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v17}, Lio/memorydrive/pleos/GloveboxDesign;->clickableSurface(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;JJFFLandroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
+ 
+     move-object v14, v0
+ 

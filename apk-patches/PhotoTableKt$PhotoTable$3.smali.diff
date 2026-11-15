@@ -1,0 +1,11 @@
+--- original/PhotoTableKt$PhotoTable$3.smali
++++ modified/PhotoTableKt$PhotoTable$3.smali
+@@ -229,7 +229,7 @@
+ 
+     const-string v8, "album-focus"
+ 
+-    invoke-static {p2, v8}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {p2, v8}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v9
+ 

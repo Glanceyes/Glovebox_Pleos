@@ -1,0 +1,29 @@
+@font-face{font-family:'Glovebox Flower Tree';src:url('assets/fonts/NanumAReumDeuRiGgocNaMu.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+#app .home-story h1,#app .detail-intro h1,#app .hero-title,#app .cover-copy h1,#app .route-card h2,#app .profile-photo h2,#app .drive-notice h1,#app .memory-card h3,#app .tile h3,#app .tile.feature h3,#app .type-preview,#app .type-preview>span{font-family:'Glovebox Flower Tree','Glovebox Pretendard',sans-serif;font-weight:400;font-synthesis:none;letter-spacing:0;line-height:1.3}
+#app .home-story h1{font-size:46px;margin-bottom:16px}
+#app .detail-intro h1{font-size:34px}
+#app .hero-title{font-size:44px}#app .cover-copy h1{font-size:46px}
+#app .route-card h2,#app .profile-photo h2{font-size:30px}
+#app .drive-notice h1{font-size:38px}
+#app .memory-card h3{font-size:24px}
+#app .tile h3,#app .tile.feature h3{font-size:23px;line-height:1.3}
+header>.brand-logo{width:170px;height:43px;background:none;mask:none;mix-blend-mode:normal}
+.brand-logo img{opacity:1;object-view-box:none;object-fit:contain;mix-blend-mode:normal}
+#app button{transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease,box-shadow 220ms ease,filter 180ms ease}
+#app :is(.tile,.memory-card,.route-card,.saved-preview-row button){transition:translate 240ms cubic-bezier(.2,.75,.25,1),box-shadow 240ms ease,border-color 180ms ease}
+@media(hover:hover){#app :is(.tile,.memory-card,.route-card):hover{translate:0 -4px;box-shadow:0 12px 26px #0003}#app :is(.thumbs,.memory-contact-sheet) button:hover{filter:brightness(1.12)}}
+#app :is(.tile,.memory-card,.route-card):active{translate:0 -1px}
+#app :is(.round,.primary,.secondary):active{scale:.96}
+#app :is(.round,.primary,.secondary){transition:scale 140ms ease,background-color 180ms ease,box-shadow 180ms ease}
+#navigation button.active:after{animation:nav-reveal 260ms ease-out;transform-origin:center}
+#app :is([role=switch],.toggle) i{transition:transform 220ms cubic-bezier(.2,.75,.25,1),background 180ms ease}
+dialog[open]{animation:dialog-reveal 280ms cubic-bezier(.2,.75,.25,1)}
+dialog[open]::backdrop{animation:backdrop-reveal 240ms ease-out}
+#toast:not([hidden]){animation:toast-reveal 240ms ease-out}
+.progress span{transition:width 350ms linear}
+@keyframes nav-reveal{from{transform:scaleX(.2);opacity:0}to{transform:scaleX(1);opacity:1}}
+@keyframes dialog-reveal{from{opacity:0;translate:0 12px;scale:.985}to{opacity:1;translate:0 0;scale:1}}
+@keyframes backdrop-reveal{from{opacity:0}to{opacity:1}}
+@keyframes toast-reveal{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+.reduce-motion *, .reduce-motion *::before,.reduce-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

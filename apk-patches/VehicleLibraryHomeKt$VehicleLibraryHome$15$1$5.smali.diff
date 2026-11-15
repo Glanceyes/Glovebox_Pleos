@@ -1,0 +1,20 @@
+--- original/VehicleLibraryHomeKt$VehicleLibraryHome$15$1$5.smali
++++ modified/VehicleLibraryHomeKt$VehicleLibraryHome$15$1$5.smali
+@@ -225,7 +225,7 @@
+ 
+     const-string v3, "drive-recap-open"
+ 
+-    invoke-static {v1, v3}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v1, v3}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v18
+ 
+@@ -323,7 +323,7 @@
+     move-object/from16 v14, p2
+ 
+     .line 109
+-    invoke-static/range {v1 .. v17}, Landroidx/compose/material3/SurfaceKt;->Surface-o_FOJdg(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;JJFFLandroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
++    invoke-static/range {v1 .. v17}, Lio/memorydrive/pleos/GloveboxDesign;->clickableSurface(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/ui/graphics/Shape;JJFFLandroidx/compose/foundation/BorderStroke;Landroidx/compose/foundation/interaction/MutableInteractionSource;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
+ 
+     :goto_1
+     return-void

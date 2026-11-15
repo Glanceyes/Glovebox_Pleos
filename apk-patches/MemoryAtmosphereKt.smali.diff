@@ -1,0 +1,18 @@
+--- original/MemoryAtmosphereKt.smali
++++ modified/MemoryAtmosphereKt.smali
+@@ -97,13 +97,13 @@
+     .line 20
+     new-instance v6, Lio/memorydrive/pleos/PhotoAtmosphere;
+ 
+-    const-wide v0, 0xff34576aL
++    const-wide v0, 0xff735139L
+ 
+     invoke-static {v0, v1}, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+ 
+     move-result-wide v1
+ 
+-    const-wide v3, 0xff4b4263L
++    const-wide v3, 0xff5e4938L
+ 
+     invoke-static {v3, v4}, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+ 

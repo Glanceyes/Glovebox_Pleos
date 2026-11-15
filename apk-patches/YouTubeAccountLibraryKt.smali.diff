@@ -1,0 +1,11 @@
+--- original/YouTubeAccountLibraryKt.smali
++++ modified/YouTubeAccountLibraryKt.smali
+@@ -1066,7 +1066,7 @@
+ 
+     const-string v1, "youtube-account-library"
+ 
+-    invoke-static {v0, v1}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
++    invoke-static {v0, v1}, Lio/memorydrive/pleos/GloveboxControls;->tag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+ 
+     move-result-object v22
+ 

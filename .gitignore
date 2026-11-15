@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.apk
+*.idsig
+*.aab
+*.keystore
+*.jks
+*.p12
+*.pass
+.env
+local.properties
+/native-assets/recording/
+/build/

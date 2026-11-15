@@ -1,0 +1,21 @@
+header>.brand-logo{width:176px;height:49px}
+#app .music-widget{height:340px;min-height:340px}
+#app .dial{isolation:isolate}
+#app .dial .dial-vortex{position:absolute;inset:15%;width:70%;height:70%;pointer-events:none;z-index:0;opacity:.48;animation:vortex-turn 22s linear infinite;filter:drop-shadow(0 0 3px #e5ab6550)}
+#app .dial .dial-vortex path{fill:none;stroke-width:1.4;stroke-linecap:round}
+#app .dial>b,#app .dial>span,#app .dial>small,#app .dial>em{position:relative;z-index:2;text-shadow:0 1px 5px #141922,0 0 10px #141922}
+#app.playing .dial .dial-vortex{animation-duration:9s;opacity:.72}
+#app .dial .dial-vortex .vortex-inner{transform-origin:100px 100px;animation:vortex-turn 15s linear infinite reverse;opacity:.6}
+#app.playing .dial .dial-vortex .vortex-inner{animation-duration:6s}
+#app .music-widget .sound-meter{display:flex;justify-content:center;height:21px;margin:4px 0;color:#f2ba72;gap:4px}
+#app .music-widget .sound-meter i{width:3px;height:16px}
+#app .music-widget .sound-meter i:nth-child(3n){height:21px}
+#app .waveform{height:48px;align-items:center;gap:4px}
+#app .waveform i{transform-origin:center;animation-name:graph-dance;animation-timing-function:ease-in-out;background:linear-gradient(#ffe1a2,#e5a254);border-radius:2px}
+#app .sound-meter i{animation-name:graph-dance;animation-timing-function:ease-in-out}
+#app.playing:not(.sound-muted) .waveform i{filter:drop-shadow(0 0 3px #f3b96544)}
+#app:not(.playing) .waveform i,#app.sound-muted .waveform i{opacity:.4}
+@keyframes vortex-turn{to{rotate:360deg}}
+@keyframes graph-dance{0%,100%{transform:scaleY(.35)}35%{transform:scaleY(.9)}68%{transform:scaleY(.52)}}
+.reduce-motion #app *,.reduce-motion #app *::after{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#app *,#app *::after{animation:none!important;transition:none!important}}

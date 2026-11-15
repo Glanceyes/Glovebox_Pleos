@@ -1,0 +1,42 @@
+/* One handwriting face for section headings; modest optical weight for small screens. */
+#app h1,#app h2,#app h3,
+#app .console-heading,#app .settings-section-label,#app .volume-heading label,
+#app .motion-setting b,#app .profile-caption>b,#app .setting-track b,
+#app .side-track b,#app .track b,#app .music-widget>p,#app .next-memory b,
+#app .now-playing b,#app .appearance-preview b{
+ font-family:'Glovebox Flower Tree','Glovebox Pretendard',sans-serif;
+ font-weight:400;font-synthesis:none;letter-spacing:0;line-height:1.3;
+ -webkit-text-stroke:.28px currentColor;
+}
+#app h1{font-size:42px}#app h2{font-size:31px}#app h3{font-size:26px}
+#app .home-story h1{font-size:52px;margin-bottom:15px;-webkit-text-stroke:.36px currentColor}
+#app .detail-intro h1{font-size:38px}
+#app .hero-title,#app .cover-copy h1{font-size:48px}
+#app .route-card h2,#app .profile-photo h2{font-size:34px}
+#app .drive-notice h1{font-size:42px}
+#app .memory-card h3{font-size:28px}
+#app .tile h3,#app .tile.feature h3{font-size:26px;line-height:1.2}
+#app .preference-title h2{font-size:30px;line-height:1.1}
+#app .preferences-heading h1,#app .archive-head h1{font-size:40px}
+#app .music-widget h3,#app .dash-info h3,#app .playlist h3{font-size:25px}
+#app .console-heading{font-size:26px;align-items:center}
+#app .settings-section-label,#app .volume-heading label,#app .motion-setting b{font-size:21px}
+#app .profile-caption>b,#app .setting-track b,#app .side-track b,#app .track b,#app .music-widget>p{font-size:24px}
+#app .now-playing b,#app .next-memory b{font-size:20px;line-height:1.1}
+#app .appearance-preview b{font-size:23px}
+#app :is(h1,h2,h3,.console-heading,.settings-section-label) :is(small,span){font-family:'Glovebox Pretendard',sans-serif;-webkit-text-stroke:0;font-weight:400}
+#app .memory-card h3 small{font-size:11px}
+#app .preference-title{min-height:48px}
+header>.brand-logo{width:168px;height:40px}
+#app .music-widget{height:340px;min-height:340px}
+#app .preferences{padding-top:21px;gap:15px}
+#app .preferences-heading h1{margin:5px 0}
+#app .preference-card{padding:16px 20px}
+#app .preference-title{min-height:44px}
+#app .saved-preview{margin-top:9px}
+#app .saved-preview-row button{height:48px}
+#app .settings-section-label{margin-bottom:5px}
+#app .setting-note{padding-top:6px}
+#app .appearance-preview{margin-top:10px}
+#app .appearance-meta{margin-top:10px;padding-top:9px}
+#app .motion-setting{margin-top:10px;padding-top:9px}

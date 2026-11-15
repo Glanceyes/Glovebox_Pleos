@@ -1,0 +1,20 @@
+/* One moving bezel, compositor transforms for music, no animated blur/shadows. */
+#app .dial .bezel-flow,#app .dial .rim-comet,#app .dial .rim-glint,#app .surface-shimmer{display:none!important}
+#app .dial .metal-reflection{will-change:transform;animation:glove-rim-turn 16s linear infinite!important}
+@keyframes glove-rim-turn{to{transform:rotate(360deg)}}
+#app .sound-meter i,#app .waveform i{animation-duration:2.4s;will-change:transform}
+#app .sound-meter i:nth-child(2n),#app .waveform i:nth-child(2n){animation-duration:2.9s;animation-delay:-1.1s}
+#app .sound-meter i:nth-child(3n),#app .waveform i:nth-child(3n){animation-duration:3.3s;animation-delay:-2s}
+#app.playing .round[data-action=play],#app.playing .drive-player,#app .track.selected{animation:none!important}
+#app .memory-video{transform:translateZ(0);backface-visibility:hidden}
+/* Preserve translucent panels while avoiding large blur passes over every frame. */
+#app .home.has-memory-video .dashboard,#app .home.has-memory-video .music-widget,#app .home.has-memory-video .coordinates,#app .home.has-memory-video .bubble{backdrop-filter:blur(6px)!important;-webkit-backdrop-filter:blur(6px)!important}
+#app .home.has-memory-video .tile{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+#app .hero-picture.has-memory-video .video-controls{backdrop-filter:none!important}
+.reduce-motion #app .dial .metal-reflection{animation:none!important}
+@media(prefers-reduced-motion:reduce){#app .dial .metal-reflection{animation:none!important}}
+/* Embedded automotive WebView: avoid sampling the live video for nested glass. */
+#app *,#app *::before,#app *::after{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+#app .home::before,#app .hero-picture::before{animation:none!important;filter:none!important}
+#app .dashboard,#app .music-widget{background:linear-gradient(135deg,#88716dca,#424453d9)!important}
+#app .dial .metal-reflection{mask-image:none!important;background:none!important;inset:3%;border:2px solid transparent;border-top-color:#fff0c1bb;border-right-color:#d9ad6844;border-radius:50%}

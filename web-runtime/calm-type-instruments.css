@@ -1,0 +1,43 @@
+/* Keep handwriting for page/section titles, restore functional labels. */
+#app .memory-card h3,#app .tile h3,#app .tile.feature h3,#app .music-widget h3,#app .dash-info h3,#app .playlist h3,#app .console-heading,#app .settings-section-label,#app .volume-heading label,#app .motion-setting b,#app .profile-caption>b,#app .setting-track b,#app .side-track b,#app .track b,#app .music-widget>p,#app .next-memory b,#app .now-playing b,#app .appearance-preview b,#app .detail-right h3,#app .detail-left h3{
+ font-family:'Glovebox Pretendard',sans-serif;font-weight:500;-webkit-text-stroke:0;letter-spacing:-.02em;line-height:1.45;
+}
+#app .memory-card h3{font-size:17px}
+#app .tile h3,#app .tile.feature h3{font-size:16px}
+#app .music-widget h3,#app .dash-info h3,#app .playlist h3{font-size:14px}
+#app .console-heading{font-size:16px}
+#app .settings-section-label,#app .volume-heading label,#app .motion-setting b{font-size:12px}
+#app .profile-caption>b{font-size:17px}
+#app .setting-track b,#app .side-track b,#app .track b,#app .music-widget>p{font-size:14px}
+#app .now-playing b,#app .next-memory b{font-size:12px}
+#app .appearance-preview b{font-size:14px}
+#app .detail-right h3,#app .detail-left h3{font-size:16px}
+#app .music-widget{height:310px;min-height:310px}
+#app .type-preview,#app .type-preview>span{font-family:'Glovebox Flower Tree',sans-serif}
+header>.brand-logo{width:166px;height:40px}
+/* Instrument animation is a visual introduction, not vehicle telemetry. */
+.dial .instrument-trace{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.instrument-trace path{stroke:#e4b775;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:instrument-draw 1200ms cubic-bezier(.2,.7,.2,1) both}
+.instrument-bezel line{animation:tick-light 700ms ease-out both;animation-delay:calc(var(--tick-index,0)*8ms)}
+@keyframes instrument-draw{from{stroke-dashoffset:1;opacity:.2}to{stroke-dashoffset:0;opacity:.9}}
+@keyframes tick-light{from{opacity:.12}to{opacity:1}}
+.sound-meter{display:inline-flex;align-items:center;gap:3px;height:21px;vertical-align:middle}
+.sound-meter i{display:block;width:3px;height:18px;background:currentColor;border-radius:2px;transform-origin:center;animation:sound-level 850ms ease-in-out infinite alternate;animation-play-state:paused;opacity:.4}
+.sound-meter i:nth-child(2n){animation-duration:630ms;animation-delay:-280ms;height:12px}
+.sound-meter i:nth-child(3n){animation-duration:1050ms;animation-delay:-510ms;height:21px}
+.sound-meter i:nth-child(4n){animation-delay:-390ms;height:15px}
+#app.playing:not(.sound-muted) .sound-meter i{animation-play-state:running;opacity:.9}
+#app.playing .album-stack>img:not(.sleeve){animation:album-breathe 5s ease-in-out infinite}
+.record{position:relative;isolation:isolate}
+.record::after{content:'';position:absolute;inset:5px;border-radius:50%;border:1px solid #efd1a555;border-top-color:#ffdf9c;border-right-color:transparent;pointer-events:none;animation:record-turn 7s linear infinite;animation-play-state:paused}
+#app.playing .record::after{animation-play-state:running}
+#app.sound-muted .waveform i{animation-play-state:paused}
+.music-widget .sound-meter{height:13px;color:#e7b77b;margin:5px 0 1px}
+.music-widget .sound-meter i{height:10px;width:2px}
+.music-widget .sound-meter i:nth-child(3n){height:13px}
+.music-widget .progress{margin-top:8px}
+@keyframes sound-level{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
+@keyframes album-breathe{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes record-turn{to{rotate:360deg}}
+@media(prefers-reduced-motion:reduce){#app *,#app *::after{animation:none!important}}
+.reduce-motion #app *,.reduce-motion #app *::after{animation:none!important}

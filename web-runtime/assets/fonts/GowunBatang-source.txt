@@ -1,0 +1,4 @@
+Official source: https://github.com/google/fonts/tree/main/ofl/gowunbatang
+Font: GowunBatang-Regular.ttf
+License: SIL Open Font License, bundled as GowunBatang-OFL.txt
+Use: Story headings and narrative copy. UI controls retain Pretendard.

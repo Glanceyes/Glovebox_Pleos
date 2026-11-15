@@ -1,0 +1,11 @@
+@font-face{font-family:'Glovebox Flower Road';src:url('assets/fonts/SangSangFlowerRoad.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+#app .home-story h1,#app .detail-intro h1,#app .hero-title,#app .cover-copy h1,#app .route-card h2,#app .profile-photo h2,#app .drive-notice h1,#app .memory-card h3,#app .tile h3,#app .tile.feature h3,#app .type-preview,#app .type-preview>span{font-family:'Glovebox Flower Road','Glovebox Pretendard',sans-serif;font-weight:400;font-synthesis:none;letter-spacing:0;line-height:1.35;word-break:keep-all}
+#app .home-story h1{font-size:48px;margin-bottom:16px}
+#app .detail-intro h1{font-size:36px}
+#app .hero-title{font-size:46px}
+#app .cover-copy h1{font-size:50px}
+#app .route-card h2,#app .profile-photo h2{font-size:32px}
+#app .drive-notice h1{font-size:40px}
+#app .memory-card h3{font-size:23px}
+#app .tile h3,#app .tile.feature h3{font-size:22px;line-height:1.35}
+#app .home-story>p,#app .detail-intro>p,#app .cover-copy>p{font-family:'Glovebox Pretendard',sans-serif;font-weight:400;line-height:1.9}

@@ -1,0 +1,13 @@
+.memory-transition{position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;pointer-events:none}
+.card-light{position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(ellipse 180px 140px at var(--light-x,50%) var(--light-y,50%),#ffe5b52b,transparent 75%);opacity:0;transition:opacity 350ms ease;z-index:3}
+@media(hover:hover){.tile:hover>.card-light,.memory-card:hover>.card-light,.route-card:hover>.card-light{opacity:1}.theme-chips i:hover{translate:0 -4px;scale:1.12}.photo-step:hover{scale:1.08}.saved-preview-row button:hover{translate:0 -3px}}
+.theme-chips i,.photo-step,.saved-preview-row button{transition:translate 250ms ease,scale 250ms ease,background-color 250ms ease}
+.photo-step:active{scale:.94}
+#app button:focus-visible{animation:focus-arrival 450ms ease-out}
+#app .connection-details i.available{animation:available-breathe 4s ease-in-out infinite}
+#app .selected .track-play{transition:color 200ms ease}
+#app.playing .selected .track-play{color:#f4c584}
+@keyframes available-breathe{0%,100%{box-shadow:0 0 0 0 #e5c08700}50%{box-shadow:0 0 0 4px #e5c08715}}
+@keyframes focus-arrival{from{outline-offset:8px}to{outline-offset:4px}}
+.reduce-motion #app *,.reduce-motion #app *::after{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#app *,#app *::after{animation:none!important;transition:none!important}}

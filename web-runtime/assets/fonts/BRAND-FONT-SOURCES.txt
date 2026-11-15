@@ -1,0 +1,19 @@
+글로브박스 서체 비교 · 다운로드 출처 (2026-11-13)
+
+카페24 고운밤 / 아네모네 에어 / 써라운드 에어 / 클래식타입
+공식 배포: https://fonts.cafe24.com/
+다운로드 정보: https://img.cafe24.com/csdstatic/freefonts/data/fonts_ko.json
+원본 ZIP 패키지를 이 폴더의 Brand-*-package.zip 파일로 보관했습니다.
+개인·기업의 상업적 사용과 웹/소프트웨어 임베딩을 허용하며 폰트 자체 판매는 금지됩니다. 재배포 시 원본 패키지의 라이선스 안내를 확인하세요.
+
+마루부리 (Regular)
+공식 배포 및 이용 안내: https://hangeul.naver.com/font
+파일: https://hangeul.pstatic.net/0/hangeul/2023/fonts/MaruBuri-Regular.woff2
+제작: 네이버. 글꼴 자체 판매는 금지되며 재배포 시 저작권 및 라이선스 안내를 포함해야 합니다.
+
+리디바탕
+공식 배포 및 라이선스: https://ridicorp.com/ridibatang/
+파일: https://ridicorp.com/wp-content/themes/ridicorp/css/font/RIDIBatang.otf
+제작: 리디. 자유롭게 이용 가능한 배포 서체이며 재배포 시 공식 라이선스와 저작권 안내를 포함해야 합니다.
+
+이 서체들은 운영체제 기본 글꼴 대신 내려받아 사용하는 외부 배포 서체입니다. 앱 전용으로 독점 제작한 글꼴은 아닙니다.

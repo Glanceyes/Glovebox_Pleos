@@ -1,0 +1,22 @@
+--- original/MainActivity.smali
++++ modified/MainActivity.smali
+@@ -8116,6 +8116,8 @@
+     .line 104
+     invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
+ 
++    invoke-static/range {p0 .. p0}, Lio/memorydrive/pleos/GloveboxMotion;->install(Landroid/app/Activity;)V
++
+     .line 105
+     invoke-virtual {p0}, Lio/memorydrive/pleos/MainActivity;->getOnBackPressedDispatcher()Landroidx/activity/OnBackPressedDispatcher;
+ 
+@@ -8616,3 +8618,10 @@
+     :cond_0
+     return-void
+ .end method
++
++.method public onUserInteraction()V
++    .locals 0
++    invoke-super {p0}, Landroidx/activity/ComponentActivity;->onUserInteraction()V
++    invoke-static {}, Lio/memorydrive/pleos/GloveboxMotion;->interact()V
++    return-void
++.end method
